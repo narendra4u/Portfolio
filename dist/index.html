@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
-
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
@@ -16,12 +14,12 @@
 		<!-- Custom fonts for this template -->
 		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900|Raleway:100,100i,300,300i,400,500,600,700,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Raleway:100,100i,300,300i,400,500,600,700,800,900" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+			rel="stylesheet">
 
 		<!-- Custom styles for this template -->
+		<link href="css/mdb.min.css" rel="stylesheet">
 		<link href="css/style.min.css" rel="stylesheet">
 
 	</head>
@@ -29,32 +27,34 @@
 	<body>
 
 		<!-- Navigation -->
-		<nav class="navbar navbar-light bg-light static-top">
-			<div class="container">
-				<a class="navbar-brand logo" href="#"><img src="img/logo.png" class="logo-img" />Eat As a Local</a>
-				<div>
-					<a class="btn btn-login" href="#">Log In</a>
-					<a class="btn btn-signup" href="#">Sign Up</a>
-				</div>	
-			</div>
-		</nav>
+		<div class="navigation">
+			<nav class="navbar sticky-top navbar-light bg-light" style="border-bottom: 4px solid #D35959;">
+				<div class="container">
+					<a class="navbar-brand logo" href="#"><img src="img/logo.png" class="logo-img" /></a>
+					<div>
+						<a class="btn btn-login" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+						<a class="btn btn-signup" data-toggle="modal" data-target="#loginModal" href="#">Sign Up</a>
+					</div>	
+				</div>
+			</nav>
+		</div>
 
 		<!-- Masthead -->
 		<header class="masthead text-white text-center">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-9 mx-auto">
+					<div class="col-xl-10 mx-auto">
 						<h1 class="mb-5">Experience your Favourite Cuisine with the Local Chefs as their Guest</h1>
 					</div>
 					<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
 						<form>
 							<div class="form-row">
 								<div class="col-12 col-md-9 mb-2 mb-md-0 search">
-									<i class="material-icons search-icon">search</i><input type="email" class="form-control form-control-lg search-bar" placeholder="Look for cuisine, chef, cook...">
+									<i class="material-icons search-icon">search</i><input class="form-control form-control-lg search-bar" placeholder="Look for cuisine, chef, cook..." autofocus>
 								</div>
 								<div class="col-12 col-md-3">
-									<button type="submit" class="btn btn-block btn-lg btn-search">Search</button>
+									<button type="submit" class="btn btn-block btn-search">Search</button>
 								</div>
 							</div>
 						</form>
@@ -63,44 +63,53 @@
 			</div>
 		</header>
 
-		<!-- Icons Grid
-		<section class="features-icons bg-light text-center">
+		<!-- Icons Grid  -->
+		<section class="features-icons text-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4">
+					<div class="col-lg-6">
 						<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
 							<div class="features-icons-icon d-flex">
-								<i class="icon-screen-desktop m-auto text-primary"></i>
+								<img src="img/dishes.png">
 							</div>
-							<h3>Fully Responsive</h3>
-							<p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+							<h4>Why Hussle Finding a Restaurant or Are You Alone</h4>
+							<p class="lead mb-0">Dine and Wine with our local cooks from the city you are travelling or staying. Feel like eating at your home.</p>
 						</div>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-6">
 						<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
 							<div class="features-icons-icon d-flex">
-								<i class="icon-layers m-auto text-primary"></i>
+								<img src="img/experience.png">
 							</div>
-							<h3>Bootstrap 4 Ready</h3>
-							<p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="features-icons-item mx-auto mb-0 mb-lg-3">
-							<div class="features-icons-icon d-flex">
-								<i class="icon-check m-auto text-primary"></i>
-							</div>
-							<h3>Easy to Use</h3>
-							<p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+							<h4>Get Your Hands Dirty With Professional Chefs</h4>
+							<p class="lead mb-0">Enjoy a full fledged experience by being hand to a Professional Chef and dining with them.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>  -->
+		</section> 
 
 		<!-- Image Showcases -->
-		<section class="showcase">
+		<!-- <section class="showcase">
 			<div class="container-fluid p-0">
+				<div class="row no-gutters">
+
+					<div class="col-lg-6 text-white showcase-img" style="background-image: url('img/eat.jpg');">
+						<div class="text-center showcase-desc">
+							<h4>Why hussle finding a restaurant or Are you alone</h4>
+							<p class="lead mb-0">Dine and Wine with our local cooks from the city you are travelling or staying. Feel like eating at your home.</p>
+						</div>	
+					</div>
+
+					<div class="col-lg-6 showcase-img" style="background-image: url('img/chef-table.jpg');">
+						<div class="text-center showcase-desc">
+							<h4>Get your hands dirty with Professional Chefs</h4>
+							<p class="lead mb-0">Enjoy a full fledged experience by being hand to a Professional Chef and dining with them.</p>
+						</div>	
+					</div>
+					
+				</div>
+
 				<div class="row no-gutters">
 
 					<div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
@@ -109,44 +118,386 @@
 						<p class="lead mb-0">Dine and Wine with our local cooks from the city you are travelling or staying. Feel like eating at your home.</p>
 					</div>
 				</div>
+
 				<div class="row no-gutters">
 					<div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
 					<div class="col-lg-6 my-auto showcase-text">
 						<h2>Get your hands dirty with Professional Chefs</h2>
-						<p class="lead mb-0">Enjoy a full fledged experience by beigna hand to a Professionak Chef and dining with them.</p>
+						<p class="lead mb-0">Enjoy a full fledged experience by being hand to a Professional Chef and dining with them.</p>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>  -->
 
 		<!-- Cuisines -->
-		<section class="testimonials bg-light">
+		<section class="cuisine-background">
 			<div class="container">
-				<h3 class="mb-5">Dishes</h3>
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="testimonial-item mx-auto mb-5 mb-lg-0">
-							<img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-							<h5>Margaret E.</h5>
-							<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+				<h2 class="margin-30">Dishes <a href="..." style="font-size: 16px;">See All</a></h2>
+						<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+								
+								<!-- Carousel items -->
+								<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+
+										<div class="carousel-item">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+
+										<div class="carousel-item">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/dishes/cheese.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Martin for Evening Dinner</h5>
+															<p class="card-text">Wine and Dine in a fine Evening</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+								</div>
+								<!--/carousel-inner--> 
+							<div class="outer-controls">
+								<div class="inner-controls">
+									<a class="carousel-control" href="#myCarousel" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control" href="#myCarousel" role="button" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+									</a>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="testimonial-item mx-auto mb-5 mb-lg-0">
-							<img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-							<h5>Fred S.</h5>
-							<p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+						<!--/myCarousel-->
+						<hr class="hr-rule" />
+
+						<h2 class="margin-30">Hands Down with Chefs <a href="..." style="font-size: 16px;">See All</a></h2>
+						<div id="carouselChef" class="carousel slide" data-ride="carousel" data-interval="false">
+								
+								<!-- Carousel items -->
+								<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/experiences/1.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Carla for Pastry Making</h5>
+															<p class="card-text">Be a Sous Chef along with others and see how pastry is made</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/experiences/1.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Carla for Pastry Making</h5>
+															<p class="card-text">Be a Sous Chef along with others and see how pastry is made</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/experiences/1.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Carla for Pastry Making</h5>
+															<p class="card-text">Be a Sous Chef along with others and see how pastry is made</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+
+										<div class="carousel-item">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/experiences/1.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Carla for Pastry Making</h5>
+															<p class="card-text">Be a Sous Chef along with others and see how pastry is made</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/experiences/1.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Carla for Pastry Making</h5>
+															<p class="card-text">Be a Sous Chef along with others and see how pastry is made</p>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="card">
+														<img class="card-img-top" src="img/experiences/1.jpg" alt="Card image cap">
+														<div class="card-body">
+															<h5 class="card-title">Join Carla for Pastry Making</h5>
+															<p class="card-text">Be a Sous Chef along with others and see how pastry is made</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+								</div>
+								<!--/carousel-inner--> 
+							<div class="outer-controls">
+								<div class="inner-controls">
+									<a class="carousel-control" href="#carouselChef" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control" href="#carouselChef" role="button" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+									</a>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="testimonial-item mx-auto mb-5 mb-lg-0">
-							<img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-							<h5>Sarah	W.</h5>
-							<p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+						<!--/myCarousel-->
+			
+		</div>
+		</section>
+
+		<!-- Cooks and Chefs -->
+		<section class="chef-background">
+			<div class="container">
+				<h2 class="margin-30">Local Cooks <a href="..." style="font-size: 16px;">See All</a></h2>
+						<div id="cookList" class="carousel slide text-center" data-ride="carousel" data-interval="false">
+								
+								<!-- Carousel items -->
+								<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+
+										<div class="carousel-item">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+								</div>
+								<!--/carousel-inner--> 
+							<div class="outer-controls">
+								<div class="inner-controls">
+									<a class="carousel-control" href="#cookList" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control" href="#cookList" role="button" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+									</a>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+						<!--/myCarousel-->
+						<hr class="hr-rule" />
+
+						<h2 class="margin-30">Our Pro Chefs <a href="..." style="font-size: 16px;">See All</a></h2>
+						<div id="chefList" class="carousel slide text-center" data-ride="carousel" data-interval="false">
+								
+								<!-- Carousel items -->
+								<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+
+										<div class="carousel-item">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="chef-item mx-auto mb-5 mb-lg-0">
+														<img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+														<h5>Margaret E.</h5>
+														<p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+													</div>
+												</div>
+											</div>
+											<!--/row-->
+										</div>
+								</div>
+								<!--/carousel-inner--> 
+							<div class="outer-controls">
+								<div class="inner-controls">
+									<a class="carousel-control" href="#chefList" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control" href="#chefList" role="button" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!--/myCarousel-->
+			
+		</div>
 		</section>
 
 		<!-- Testimonials -->
@@ -194,7 +545,7 @@
 									<input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
 								</div>
 								<div class="col-12 col-md-3">
-									<button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+									<button type="submit" class="btn btn-block btn-lg btn-signup">Sign up!</button>
 								</div>
 							</div>
 						</form>
@@ -203,58 +554,50 @@
 			</div>
 		</section>
 
+		<div class="container test-padding">
+
+			<div class="hero-image">
+				<div class="test">
+					<p class="test-text text-center">Immerse in Cooking Experience with Locals</p>
+				</div>
+				<div class="ver-rect"></div>
+				<div class="hor-rect"></div>
+
+				<div class="test-2">
+					<p class="test-text-2 text-center">Find any Local Dish made by the Locals</p>
+				</div>
+				<div class="ver-rect-2"></div>
+				<div class="hor-rect-2"></div>
+
+			</div>
+
+		</div>
+
 		<!-- Footer -->
 		<footer class="footer bg-light">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-						<ul class="list-inline mb-2">
-							<li class="list-inline-item">
-								<a href="#">About</a>
-							</li>
-							<li class="list-inline-item">&sdot;</li>
-							<li class="list-inline-item">
-								<a href="#">Contact</a>
-							</li>
-							<li class="list-inline-item">&sdot;</li>
-							<li class="list-inline-item">
-								<a href="#">Terms of Use</a>
-							</li>
-							<li class="list-inline-item">&sdot;</li>
-							<li class="list-inline-item">
-								<a href="#">Privacy Policy</a>
-							</li>
-						</ul>
-						<p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
-					</div>
-					<div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-						<ul class="list-inline mb-0">
-							<li class="list-inline-item mr-3">
-								<a href="#">
-									<i class="fa fa-facebook fa-2x fa-fw"></i>
-								</a>
-							</li>
-							<li class="list-inline-item mr-3">
-								<a href="#">
-									<i class="fa fa-twitter fa-2x fa-fw"></i>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="#">
-									<i class="fa fa-instagram fa-2x fa-fw"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			
 		</footer>
 
+		<!-- login modals -->
+
+		<!-- Button trigger modal -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
 		<!-- Bootstrap core JavaScript -->
-		<script src="jsjquery.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/mdb.min.js"></script>
 		<script src="js/popper.min.js"></script>
+		<script src="js/eatlocal.js"></script>
 
 	</body>
 

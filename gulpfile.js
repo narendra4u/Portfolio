@@ -30,12 +30,12 @@ gulp.task('css-minify', function() {
 // JavaScript Tasks
 gulp.task('js-build', function() {
   gulp.src(plugins.modules)
-    .pipe(concat('mdb.js'))
+    .pipe(concat('eatlocal.js'))
     .pipe(gulp.dest('./dist/js/'))
 });
 
 gulp.task('js-minify', function() {
-  gulp.src('./dist/js/mdb.js')
+  gulp.src('./dist/js/eatlocal.js')
     .pipe(minify({
       ext:{
         // src:'.js',
@@ -77,7 +77,7 @@ gulp.task('live-server', function() {
 });
 
 // Watch on everything
-gulp.task('mdb-go', function() {
+gulp.task('eatlocal', function() {
   gulp.start('live-server');
   gulp.watch("scss/**/*.scss", ['css-compile']);
   gulp.watch(["dist/css/*.css", "!dist/css/*.min.css"], ['css-minify']);

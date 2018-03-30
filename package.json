@@ -25,5 +25,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1"
   },
-  "description": "Material Design for Bootstrap"
+  "description": "Material Design for Bootstrap",
+  "dependencies": {
+    "materialize-css": "^1.0.0-beta"
+  }
 }
