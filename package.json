@@ -27,6 +27,7 @@
   },
   "description": "Material Design for Bootstrap",
   "dependencies": {
+    "material-datetime-picker": "^2.4.0",
     "materialize-css": "^1.0.0-beta"
   }
 }

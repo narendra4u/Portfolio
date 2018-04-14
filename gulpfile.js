@@ -9,6 +9,7 @@ const minify = require('gulp-minify');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 
+
 // CSS Tasks
 gulp.task('css-compile', function() {
   gulp.src('scss/**/*.scss')
@@ -82,6 +83,6 @@ gulp.task('eatlocal', function() {
   gulp.watch("scss/**/*.scss", ['css-compile']);
   gulp.watch(["dist/css/*.css", "!dist/css/*.min.css"], ['css-minify']);
   gulp.watch("js/**/*.js", ['js-build']);
-  gulp.watch("dist/js/mdb.js", ['js-minify']);
+  gulp.watch("dist/js/eatlocal.js", ['js-minify']);
   gulp.watch("**/*", {cwd: './img/'}, ['img-compression']);
 });
