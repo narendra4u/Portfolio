@@ -12,77 +12,77 @@ const imagemin = require('gulp-imagemin');
 
 // CSS Tasks
 gulp.task('css-compile', function() {
-  gulp.src('scss/**/*.scss')
-    .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 10 versions'],
-      cascade: false
-    }))
-    .pipe(gulp.dest('./dist/css/'));
+	gulp.src('scss/**/*.scss')
+		.pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
+		.pipe(autoprefixer({
+			browsers: ['last 10 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task('css-minify', function() {
-    gulp.src(['./dist/css/*.css', '!dist/css/*.min.css'])
-      .pipe(cssmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('./dist/css'))
+		gulp.src(['./dist/css/*.css', '!dist/css/*.min.css'])
+			.pipe(cssmin())
+			.pipe(rename({suffix: '.min'}))
+			.pipe(gulp.dest('./dist/css'))
 });
 
 // JavaScript Tasks
 gulp.task('js-build', function() {
-  gulp.src(plugins.modules)
-    .pipe(concat('eatlocal.js'))
-    .pipe(gulp.dest('./dist/js/'))
+	gulp.src(plugins.modules)
+		.pipe(concat('stylish-portfolio.js'))
+		.pipe(gulp.dest('./dist/js/'))
 });
 
 gulp.task('js-minify', function() {
-  gulp.src('./dist/js/eatlocal.js')
-    .pipe(minify({
-      ext:{
-        // src:'.js',
-        min:'.min.js'
-      },
-      noSource: true,
-    }))
-    .pipe(gulp.dest('./dist/js'));
+	gulp.src('/js/*.js')
+		.pipe(minify({
+			ext:{
+				// src:'.js',
+				min:'.min.js'
+			},
+			noSource: true,
+		}))
+		.pipe(gulp.dest('./dist/js'));
 });
 
 // Image Compression
 gulp.task('img-compression', function() {
-  gulp.src('./img/*')
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
-        ]
-      })
-    ]))
-    .pipe(gulp.dest('./dist/img'));
+	gulp.src('./img/*')
+		.pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: true},
+					{cleanupIDs: false}
+				]
+			})
+		]))
+		.pipe(gulp.dest('./dist/img'));
 });
 
 // Live Server
 gulp.task('live-server', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./dist",
-      directory: true
-    },
-    notify: false
-  });
+	browserSync.init({
+		server: {
+			baseDir: "./dist",
+			directory: true
+		},
+		notify: false
+	});
 
-  gulp.watch("**/*", {cwd: './dist/'}, browserSync.reload);
+	gulp.watch("**/*", {cwd: './dist/'}, browserSync.reload);
 });
 
 // Watch on everything
-gulp.task('eatlocal', function() {
-  gulp.start('live-server');
-  gulp.watch("scss/**/*.scss", ['css-compile']);
-  gulp.watch(["dist/css/*.css", "!dist/css/*.min.css"], ['css-minify']);
-  gulp.watch("js/**/*.js", ['js-build']);
-  gulp.watch("dist/js/eatlocal.js", ['js-minify']);
-  gulp.watch("**/*", {cwd: './img/'}, ['img-compression']);
+gulp.task('uxfolio', function() {
+	gulp.start('live-server');
+	gulp.watch("scss/**/*.scss", ['css-compile']);
+	gulp.watch(["dist/css/*.css", "!dist/css/*.min.css"], ['css-minify']);
+	gulp.watch("js/**/*.js", ['js-build']);
+	gulp.watch("js/*.js", ['js-minify']);
+	gulp.watch("img/**/*.*", ['img-compression']);
 });
